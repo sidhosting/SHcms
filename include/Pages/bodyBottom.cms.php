@@ -1,0 +1,1 @@
+<?php if(is_file("page/inc/bodyBottom.proj.php")){ include("page/inc/bodyBottom.proj.php"); } ?>
