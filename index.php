@@ -1,5 +1,5 @@
 <?php 
-
+// Disco info@sid
 // DEBUG Function
 $LoadingKey=strtoupper(bin2hex(random_bytes("8")));	// Random Code
 function sh_debug($array){
