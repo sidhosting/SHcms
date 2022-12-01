@@ -1,6 +1,5 @@
 <?php 
-
-// DEBUG Function
+// DEBUG Function Samaj ni aa rahi 
 $LoadingKey=strtoupper(bin2hex(random_bytes("8")));	// Random Code
 function sh_debug($array){
 	global $con;
