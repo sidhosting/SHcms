@@ -1,5 +1,6 @@
 <?php 
-// DEBUG Function Samaj ni aa rahi 
+
+// DEBUG Function
 $LoadingKey=strtoupper(bin2hex(random_bytes("8")));	// Random Code
 function sh_debug($array){
 	global $con;
@@ -81,8 +82,8 @@ if(is_file("page/index.php")){
 sh_debug(array("Msg"=>"End","File"=>__FILE__,"Line"=>__Line__));
 
 if(isset($con)){ 
+	if($path_exp["1"]!="api"){ $VisiterID=VisiterID(); } else { $VisiterID="api"; }
 	
-	$VisiterID=VisiterID();
 	$VisiterIP=VisiterIP();
 	foreach ($sh_debug as $sh_debug_row) {
 		$sh_debug_row["Function"]=mysqli_real_escape_string($con, $sh_debug_row["Function"]);
