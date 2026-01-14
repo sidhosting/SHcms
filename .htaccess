@@ -5,23 +5,24 @@ RewriteEngine On
 # WWW-Remove
 #RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 #RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
 
 # HTTP to HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 
 
 # Hotlink Protection
 # RewriteCond %{HTTP_REFERER} !^https://%{HTTP_HOST}/.*$      [NC] 
 # RewriteCond %{HTTP_REFERER} !^https://facebook.com$      [NC]
-RewriteCond %{REQUEST_URI} !^/img/public_links
 # RewriteCond %{REQUEST_URI} !^/page/public_links
-RewriteCond %{HTTP_HOST}@@%{HTTP_REFERER} !^([^@]*)@@https?://\1/.*
-RewriteRule .*\.(jpg|jpeg|gif|png|bmp|js|css)$ - [F,NC]
+
+#RewriteCond %{REQUEST_URI} !^/img/public_links
+#RewriteCond %{HTTP_HOST}@@%{HTTP_REFERER} !^([^@]*)@@https?://\1/.*
+#RewriteRule .*\.(jpg|jpeg|gif|png|bmp|js|css)$ - [F,NC]
 
 
 
